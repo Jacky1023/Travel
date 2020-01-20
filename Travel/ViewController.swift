@@ -11,6 +11,7 @@ import UIKit
 class ViewController: UIViewController {
     @IBOutlet weak var txtUsername: UITextField!
     @IBOutlet weak var txtPassword: UITextField!
+    @IBOutlet weak var Login: UIButton!
     @IBAction func btnSignup(_ sender: Any) {
         if true{
                    
@@ -21,7 +22,9 @@ class ViewController: UIViewController {
                }
     }
     @IBAction func btnLogin(_ sender: Any) {
+        
     }
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
