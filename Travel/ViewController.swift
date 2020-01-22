@@ -7,7 +7,7 @@
 //
 
 import UIKit
-
+import FirebaseDatabase
 class ViewController: UIViewController {
     @IBOutlet weak var txtUsername: UITextField!
     @IBOutlet weak var txtPassword: UITextField!
@@ -31,11 +31,18 @@ class ViewController: UIViewController {
     }
     
     
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        let ref = Database.database().reference()
+        ref.child("someid").removeValue()
+        /*for update firebase*/
+//        let updates = ["someid/Username":"John","-Lz2dCTv6nUm0tTkMzjS":"Chen Kang"]
+//        ref.updateChildValues(updates)
     }
 
 
 }
+
 

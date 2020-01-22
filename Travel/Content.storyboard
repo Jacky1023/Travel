@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="a10-uK-a47">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="a10-uK-a47">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -23,17 +23,31 @@
             </objects>
             <point key="canvasLocation" x="1132" y="-595"/>
         </scene>
-        <!--View Controller-->
+        <!--Travel Map View Controller-->
         <scene sceneID="3kb-lE-XaE">
             <objects>
-                <viewController id="gvH-jj-UVT" sceneMemberID="viewController">
+                <viewController id="gvH-jj-UVT" customClass="TravelMapViewController" customModule="Travel" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="RuM-uW-JAH">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="plo-4h-dQC">
+                                <rect key="frame" x="0.0" y="88" width="414" height="725"/>
+                            </mapView>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="plo-4h-dQC" firstAttribute="top" secondItem="qaU-gT-Ulo" secondAttribute="top" id="Com-Rg-iKu"/>
+                            <constraint firstItem="qaU-gT-Ulo" firstAttribute="bottom" secondItem="plo-4h-dQC" secondAttribute="bottom" id="HjA-d5-dDN"/>
+                            <constraint firstItem="plo-4h-dQC" firstAttribute="leading" secondItem="qaU-gT-Ulo" secondAttribute="leading" id="O5X-sX-LLD"/>
+                            <constraint firstItem="qaU-gT-Ulo" firstAttribute="trailing" secondItem="plo-4h-dQC" secondAttribute="trailing" id="Y2E-1Z-hWw"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="qaU-gT-Ulo"/>
                     </view>
                     <navigationItem key="navigationItem" id="mYV-3f-uvU"/>
+                    <connections>
+                        <outlet property="TravelMap" destination="plo-4h-dQC" id="Eac-w4-wfV"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KNw-RG-LAL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -150,6 +164,7 @@
                 <tabBarController storyboardIdentifier="home" automaticallyAdjustsScrollViewInsets="NO" useStoryboardIdentifierAsRestorationIdentifier="YES" id="a10-uK-a47" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="3sX-jw-Kol">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
