@@ -7,22 +7,6 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
-        <scene sceneID="slo-uv-lE2">
-            <objects>
-                <viewController id="DUt-56-nM2" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="0u1-nd-Lyu">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <viewLayoutGuide key="safeArea" id="SS8-qe-QeX"/>
-                    </view>
-                    <navigationItem key="navigationItem" id="FMG-h4-lGA"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="soa-c8-GG9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1132" y="-595"/>
-        </scene>
         <!--Travel Map View Controller-->
         <scene sceneID="3kb-lE-XaE">
             <objects>
@@ -151,12 +135,12 @@
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="DUt-56-nM2" kind="relationship" relationship="rootViewController" id="6pB-79-Jfu"/>
+                        <segue destination="XyB-do-aIk" kind="relationship" relationship="rootViewController" id="i1k-l6-1Jd"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sQD-Qx-sIm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="222" y="-595"/>
+            <point key="canvasLocation" x="222" y="-579"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="F7u-ni-ikD">
@@ -217,6 +201,64 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cJt-hM-uje" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="222" y="2276"/>
+        </scene>
+        <!--Filter Table Viewcontroller-->
+        <scene sceneID="NJu-oM-y6B">
+            <objects>
+                <tableViewController id="XyB-do-aIk" customClass="FilterTableViewcontroller" customModule="Travel" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="xAc-6j-kgA">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="tablecell" rowHeight="51" id="YWQ-4T-aY6" customClass="CountryTableViewCell" customModule="Travel" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="414" height="51"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="YWQ-4T-aY6" id="smY-Du-Sp9" customClass="CountryTableViewCell" customModule="Travel" customModuleProvider="target">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="51"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="R73-TQ-Odj">
+                                            <rect key="frame" x="-6" y="0.0" width="63" height="51"/>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Bm-o2-eTY">
+                                            <rect key="frame" x="78" y="11" width="42" height="31"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="trailing" secondItem="1Bm-o2-eTY" secondAttribute="trailing" constant="20" symbolic="YES" id="7KX-Rf-a5q"/>
+                                        <constraint firstItem="1Bm-o2-eTY" firstAttribute="top" secondItem="smY-Du-Sp9" secondAttribute="topMargin" id="EaA-xl-GvP"/>
+                                        <constraint firstItem="1Bm-o2-eTY" firstAttribute="top" secondItem="smY-Du-Sp9" secondAttribute="top" constant="20" symbolic="YES" id="LKa-yd-W79"/>
+                                        <constraint firstAttribute="trailing" secondItem="R73-TQ-Odj" secondAttribute="trailing" constant="20" symbolic="YES" id="caC-4l-pRQ"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="1Bm-o2-eTY" secondAttribute="bottom" id="cfb-ae-iqh"/>
+                                        <constraint firstItem="1Bm-o2-eTY" firstAttribute="leading" secondItem="R73-TQ-Odj" secondAttribute="trailing" constant="8" symbolic="YES" id="cud-ci-D9l"/>
+                                        <constraint firstItem="R73-TQ-Odj" firstAttribute="top" secondItem="smY-Du-Sp9" secondAttribute="top" constant="20" symbolic="YES" id="eAv-6Z-DBx"/>
+                                        <constraint firstAttribute="bottom" secondItem="R73-TQ-Odj" secondAttribute="bottom" constant="20" symbolic="YES" id="edU-q8-Ben"/>
+                                        <constraint firstItem="1Bm-o2-eTY" firstAttribute="leading" secondItem="R73-TQ-Odj" secondAttribute="trailing" constant="8" symbolic="YES" id="j7A-cY-6Qv"/>
+                                        <constraint firstItem="R73-TQ-Odj" firstAttribute="leading" secondItem="smY-Du-Sp9" secondAttribute="leading" constant="20" symbolic="YES" id="m11-lR-Eas"/>
+                                        <constraint firstAttribute="bottom" secondItem="1Bm-o2-eTY" secondAttribute="bottom" constant="20" symbolic="YES" id="mEX-nY-YsE"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="1Bm-o2-eTY" secondAttribute="trailing" id="rls-G9-dI4"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="CountryFlagImage" destination="edU-q8-Ben" id="MoD-kq-w96"/>
+                                    <outlet property="countrylabel" destination="1Bm-o2-eTY" id="7Wz-qL-UAD"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="XyB-do-aIk" id="V4X-OC-Bhh"/>
+                            <outlet property="delegate" destination="XyB-do-aIk" id="MGO-Gk-9Xr"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="Akf-Mp-oEN"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uS5-Lg-fMT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1131.8840579710145" y="-579.24107142857144"/>
         </scene>
     </scenes>
 </document>
