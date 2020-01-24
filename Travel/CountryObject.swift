@@ -11,10 +11,10 @@ import UIKit
 
 class CountryObject{
     var name:String
-    var image:UIImage!
+    var checked : Bool
     
-    init!(name:String,image:UIImage!) {
+    init(name:String, checked: Bool) {
         self.name = name
-        self.image=image
+        self.checked = checked
     }
 }

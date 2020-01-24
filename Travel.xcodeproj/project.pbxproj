@@ -20,8 +20,9 @@
 		0EE9A45923CEE742003912FD /* TravelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EE9A45823CEE742003912FD /* TravelTests.swift */; };
 		0EE9A46423CEE742003912FD /* TravelUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EE9A46323CEE742003912FD /* TravelUITests.swift */; };
 		BA4D4D1B23DA0F6700D0998B /* FilterTableviewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA4D4D1A23DA0F6700D0998B /* FilterTableviewController.swift */; };
-		BA4D4D1D23DA17D400D0998B /* CountryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA4D4D1C23DA17D400D0998B /* CountryTableViewCell.swift */; };
 		BA4D4D1F23DA1E9C00D0998B /* CountryObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA4D4D1E23DA1E9C00D0998B /* CountryObject.swift */; };
+		BA77784923DB2AE40010B17F /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA77784823DB2AE40010B17F /* TableViewCell.swift */; };
+		BA77784B23DB62EC0010B17F /* PeopleObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA77784A23DB62EC0010B17F /* PeopleObject.swift */; };
 		D7E838F1A76BFB2CE9E4075B /* Pods_Travel.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 99436532A91E0F1761ACE1BE /* Pods_Travel.framework */; };
 /* End PBXBuildFile section */
 
@@ -65,8 +66,9 @@
 		46209618CBB08106C4D706D7 /* Pods-Travel.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Travel.release.xcconfig"; path = "Target Support Files/Pods-Travel/Pods-Travel.release.xcconfig"; sourceTree = "<group>"; };
 		99436532A91E0F1761ACE1BE /* Pods_Travel.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Travel.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BA4D4D1A23DA0F6700D0998B /* FilterTableviewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterTableviewController.swift; sourceTree = "<group>"; };
-		BA4D4D1C23DA17D400D0998B /* CountryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryTableViewCell.swift; sourceTree = "<group>"; };
 		BA4D4D1E23DA1E9C00D0998B /* CountryObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryObject.swift; sourceTree = "<group>"; };
+		BA77784823DB2AE40010B17F /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
+		BA77784A23DB62EC0010B17F /* PeopleObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleObject.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -126,14 +128,15 @@
 				0EE9A44523CEE741003912FD /* ViewController.swift */,
 				0EE9A44723CEE741003912FD /* Main.storyboard */,
 				0EE9A44A23CEE742003912FD /* Assets.xcassets */,
-				BA4D4D1C23DA17D400D0998B /* CountryTableViewCell.swift */,
 				0EE9A44C23CEE742003912FD /* LaunchScreen.storyboard */,
 				0EE9A44F23CEE742003912FD /* Info.plist */,
 				0E43525823CF5F42000F9C94 /* Content.storyboard */,
 				BA4D4D1A23DA0F6700D0998B /* FilterTableviewController.swift */,
+				BA77784A23DB62EC0010B17F /* PeopleObject.swift */,
 				BA4D4D1E23DA1E9C00D0998B /* CountryObject.swift */,
 				0E02A8B223D5A4CE00487B2B /* TravelMapViewController.swift */,
 				0E02A8B423D5A5CB00487B2B /* TravelLocationDelegate.swift */,
+				BA77784823DB2AE40010B17F /* TableViewCell.swift */,
 			);
 			path = Travel;
 			sourceTree = "<group>";
@@ -352,11 +355,12 @@
 			files = (
 				0E02A8B523D5A5CB00487B2B /* TravelLocationDelegate.swift in Sources */,
 				BA4D4D1F23DA1E9C00D0998B /* CountryObject.swift in Sources */,
+				BA77784B23DB62EC0010B17F /* PeopleObject.swift in Sources */,
 				0EE9A44623CEE741003912FD /* ViewController.swift in Sources */,
 				0EE9A44223CEE741003912FD /* AppDelegate.swift in Sources */,
+				BA77784923DB2AE40010B17F /* TableViewCell.swift in Sources */,
 				BA4D4D1B23DA0F6700D0998B /* FilterTableviewController.swift in Sources */,
 				0EE9A44423CEE741003912FD /* SceneDelegate.swift in Sources */,
-				BA4D4D1D23DA17D400D0998B /* CountryTableViewCell.swift in Sources */,
 				0E02A8B323D5A4CE00487B2B /* TravelMapViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
