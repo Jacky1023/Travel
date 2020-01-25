@@ -13,6 +13,7 @@ class FilterTableViewcontroller : UITableViewController{
     
     var countrysection = [CountryObject]()
     var peoplesection = [PeopleObject]()
+    var placesection = [PlaceObject]()
     
     var filterheaders:[String] = ["Country","Recommended People","Place Category","Rating","Datetime"]
     
@@ -22,11 +23,13 @@ class FilterTableViewcontroller : UITableViewController{
         loadcountries()
         
         loadpeople()
+        
+        loadplaces()
     }
     
     // return number of sections
     override func numberOfSections(in tableView: UITableView) -> Int {
-        return 2
+        return 3
     }
     
     //return number of rows in each section
@@ -36,6 +39,8 @@ class FilterTableViewcontroller : UITableViewController{
             return countrysection.count
         case 1:
             return peoplesection.count
+        case 2:
+            return placesection.count
         default:
             return 0
         }
@@ -65,6 +70,9 @@ class FilterTableViewcontroller : UITableViewController{
             
         case 1:
             cell.Label.text = self.peoplesection[(indexPath as NSIndexPath).row].peopletype
+            
+        case 2:
+            cell.Label.text = self.placesection[(indexPath as NSIndexPath).row].placetype
             
         default:
             cell
@@ -97,6 +105,16 @@ class FilterTableViewcontroller : UITableViewController{
                 tableView.cellForRow(at: indexPath)?.accessoryType = UITableViewCell.AccessoryType.checkmark
             }
             
+        case 2:
+            placesection[indexPath.row].checked = true
+            if tableView.cellForRow(at: indexPath)?.accessoryType == UITableViewCell.AccessoryType.checkmark{
+                tableView.cellForRow(at: indexPath)?.accessoryType = UITableViewCell.AccessoryType.none
+            placesection[indexPath.row].checked = false
+            }
+            else{
+                tableView.cellForRow(at: indexPath)?.accessoryType = UITableViewCell.AccessoryType.checkmark
+            }
+            
         default:
             0
         }
@@ -124,6 +142,23 @@ class FilterTableViewcontroller : UITableViewController{
         let people5 = PeopleObject(peopletype: "Teenager", checked: false)
         
         peoplesection += [people1,people2,people3,people4,people5]
+    }
+    
+    private func loadplaces(){
+        let place1 = PlaceObject(placetype: "Architecture", checked: false)
+        
+        let place2 = PlaceObject(placetype: "Landmarks", checked: false)
+
+        let place3 = PlaceObject(placetype: "Cityscape", checked: false)
+
+        let place4 = PlaceObject(placetype: "Drone", checked: false)
+
+        let place5 = PlaceObject(placetype: "Landscape", checked: false)
+
+        let place6 = PlaceObject(placetype: "Lifestyle", checked: false)
+        
+        placesection += [place1,place2,place3,place4,place5,place6]
+
     }
     
 }
