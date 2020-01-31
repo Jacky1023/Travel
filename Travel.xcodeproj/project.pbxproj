@@ -24,6 +24,7 @@
 		BA77784923DB2AE40010B17F /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA77784823DB2AE40010B17F /* TableViewCell.swift */; };
 		BA77784B23DB62EC0010B17F /* PeopleObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA77784A23DB62EC0010B17F /* PeopleObject.swift */; };
 		BA77784D23DC36660010B17F /* PlaceObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA77784C23DC36660010B17F /* PlaceObject.swift */; };
+		BAD797F023E47CB70012204E /* CurrencyConverterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAD797EF23E47CB70012204E /* CurrencyConverterViewController.swift */; };
 		D7E838F1A76BFB2CE9E4075B /* Pods_Travel.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 99436532A91E0F1761ACE1BE /* Pods_Travel.framework */; };
 /* End PBXBuildFile section */
 
@@ -71,6 +72,7 @@
 		BA77784823DB2AE40010B17F /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
 		BA77784A23DB62EC0010B17F /* PeopleObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleObject.swift; sourceTree = "<group>"; };
 		BA77784C23DC36660010B17F /* PlaceObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceObject.swift; sourceTree = "<group>"; };
+		BAD797EF23E47CB70012204E /* CurrencyConverterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyConverterViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -140,6 +142,7 @@
 				0E02A8B223D5A4CE00487B2B /* TravelMapViewController.swift */,
 				0E02A8B423D5A5CB00487B2B /* TravelLocationDelegate.swift */,
 				BA77784823DB2AE40010B17F /* TableViewCell.swift */,
+				BAD797EF23E47CB70012204E /* CurrencyConverterViewController.swift */,
 			);
 			path = Travel;
 			sourceTree = "<group>";
@@ -360,6 +363,7 @@
 				BA4D4D1F23DA1E9C00D0998B /* CountryObject.swift in Sources */,
 				BA77784B23DB62EC0010B17F /* PeopleObject.swift in Sources */,
 				0EE9A44623CEE741003912FD /* ViewController.swift in Sources */,
+				BAD797F023E47CB70012204E /* CurrencyConverterViewController.swift in Sources */,
 				0EE9A44223CEE741003912FD /* AppDelegate.swift in Sources */,
 				BA77784923DB2AE40010B17F /* TableViewCell.swift in Sources */,
 				BA4D4D1B23DA0F6700D0998B /* FilterTableviewController.swift in Sources */,

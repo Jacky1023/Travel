@@ -15,7 +15,7 @@ class FilterTableViewcontroller : UITableViewController{
     var peoplesection = [PeopleObject]()
     var placesection = [PlaceObject]()
     
-    var filterheaders:[String] = ["Country","Recommended People","Place Category","Rating","Datetime"]
+    var filterheaders:[String] = ["Country","People","Place Category","Rating","Datetime"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -62,7 +62,7 @@ class FilterTableViewcontroller : UITableViewController{
         guard let cell = self.tableView.dequeueReusableCell(withIdentifier: "tablecell", for: indexPath) as? TableViewCell else{
             fatalError("this cannot be dequeueresuable cell")
         }
-
+        
         switch ((indexPath as NSIndexPath).section) {
             
         case 0:
