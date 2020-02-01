@@ -54,22 +54,6 @@
             <point key="canvasLocation" x="1131.8840579710145" y="857.8125"/>
         </scene>
         <!--View Controller-->
-        <scene sceneID="FJP-8l-XYj">
-            <objects>
-                <viewController id="grn-Tb-80Y" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="KVw-0O-jft">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <viewLayoutGuide key="safeArea" id="wnO-jX-nAs"/>
-                    </view>
-                    <navigationItem key="navigationItem" id="pOL-fB-bqp"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Jzd-sv-M4q" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1132" y="1572"/>
-        </scene>
-        <!--View Controller-->
         <scene sceneID="8O3-dA-wiz">
             <objects>
                 <viewController id="KbB-Ii-yjo" sceneMemberID="viewController">
@@ -176,12 +160,84 @@
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="grn-Tb-80Y" kind="relationship" relationship="rootViewController" id="ZYA-kl-oGZ"/>
+                        <segue destination="wPY-yC-cHU" kind="relationship" relationship="rootViewController" id="UJ3-hD-vL0"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Yf6-QX-Xia" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="222" y="1572"/>
+        </scene>
+        <!--Currency ControllerVC-->
+        <scene sceneID="Xy3-r9-DdM">
+            <objects>
+                <viewController id="wPY-yC-cHU" customClass="CurrencyControllerVC" customModule="Travel" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="kdB-nK-bZ1">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <pickerView tag="2" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="O1K-DU-e3I">
+                                <rect key="frame" x="0.0" y="471" width="414" height="160"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <outlet property="delegate" destination="wPY-yC-cHU" id="66P-3V-hNI"/>
+                                </connections>
+                            </pickerView>
+                            <pickerView tag="1" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="esw-54-wld">
+                                <rect key="frame" x="0.0" y="235" width="414" height="160"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <outlet property="delegate" destination="wPY-yC-cHU" id="US9-6t-Vus"/>
+                                </connections>
+                            </pickerView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Currency Converter" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XKd-j7-DiU">
+                                <rect key="frame" x="0.0" y="126" width="414" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="WGw-j8-1lP">
+                                <rect key="frame" x="159" y="193" width="97" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mBx-ok-HS2">
+                                <rect key="frame" x="172" y="668" width="71" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemPinkColor" red="1" green="0.1764705882" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Button">
+                                    <color key="titleColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                </state>
+                                <connections>
+                                    <action selector="convertbtn:" destination="wPY-yC-cHU" eventType="touchUpInside" id="t2Q-PL-tk9"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aRe-t3-NoV">
+                                <rect key="frame" x="97" y="421" width="220" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="XKd-j7-DiU" firstAttribute="leading" secondItem="y92-1S-LzT" secondAttribute="leading" id="9J6-vP-ASM"/>
+                            <constraint firstItem="y92-1S-LzT" firstAttribute="trailing" secondItem="XKd-j7-DiU" secondAttribute="trailing" id="VJg-7V-bER"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="y92-1S-LzT"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="elT-o4-76q"/>
+                    <connections>
+                        <outlet property="amounttf" destination="WGw-j8-1lP" id="T9t-ol-sqk"/>
+                        <outlet property="pickerview1" destination="esw-54-wld" id="DIU-75-1m2"/>
+                        <outlet property="pickerview2" destination="O1K-DU-e3I" id="Iqw-W2-xpN"/>
+                        <outlet property="result" destination="aRe-t3-NoV" id="TZu-y8-lQk"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="o5B-43-0d8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1131.8840579710145" y="1571.6517857142856"/>
         </scene>
         <!--User-->
         <scene sceneID="bpz-Gy-tko">

@@ -9,11 +9,63 @@
 import Foundation
 import UIKit
 
-class CurrencyControllerVC : UIViewController{
+class CurrencyControllerVC : UIViewController, UIPickerViewDelegate, UIPickerViewDataSource{
     
     var mycurrency:[String] = []
-    
+    var mycurrency2:[String] = []
     var myvalues : [Double] = []
+    var myvalues2 : [Double] = []
+    var activecurrency:Double = 0
+    var activecurrency2:Double = 0
+    var calculaterate:Double = 0
+    
+    
+    @IBOutlet weak var amounttf: UITextField!
+    @IBOutlet weak var pickerview1: UIPickerView!
+    @IBOutlet weak var pickerview2: UIPickerView!
+    @IBOutlet weak var result: UILabel!
+    
+    @IBAction func convertbtn(_ sender: Any) {
+        if(amounttf.text == ""){
+            result.text = "Please input amount."
+        }
+        else{
+            result.text = String(Double(amounttf.text!)! * calculaterate)
+        }
+    }
+    
+    func numberOfComponents(in pickerView: UIPickerView) -> Int {
+        return 1
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        if(pickerView.tag == 1){
+            return mycurrency.count // determine number of rows in pickerview
+        }
+        else{
+            return mycurrency2.count
+        }
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        if(pickerView.tag == 1){
+            return mycurrency[row] //display countryname in ui
+        }
+        else{
+            return mycurrency2[row] //display countryname in ui
+        }
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        if(pickerView.tag == 1){
+            activecurrency = myvalues[row] //rates of the country selected
+        }
+        else{
+            activecurrency2 = myvalues2[row] //rates of the country selected
+        }
+        
+        calculaterate = activecurrency2/activecurrency
+}
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -40,6 +92,8 @@ class CurrencyControllerVC : UIViewController{
                                 // in rates, key is the country name whereas value is the currency, visit the url to refer
                                 self.mycurrency.append((key as? String)!)
                                 self.myvalues.append((value as? Double)!)
+                                self.mycurrency2.append((key as? String)!)
+                                self.myvalues2.append((value as? Double)!)
                             }
                         }
                     }
@@ -48,6 +102,8 @@ class CurrencyControllerVC : UIViewController{
                     }
                 }
             }
+            self.pickerview1.reloadAllComponents()
+            self.pickerview2.reloadAllComponents()
         }
         task.resume() //restart the task if it is suspended/delayed
     }
