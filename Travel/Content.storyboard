@@ -28,7 +28,13 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="qaU-gT-Ulo"/>
                     </view>
-                    <navigationItem key="navigationItem" id="mYV-3f-uvU"/>
+                    <navigationItem key="navigationItem" id="mYV-3f-uvU">
+                        <barButtonItem key="rightBarButtonItem" title="Item" image="plus" catalog="system" id="YfR-Lb-lsS">
+                            <connections>
+                                <segue destination="cCj-qQ-ncT" kind="show" id="Dwt-5t-6mG"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="TravelMap" destination="plo-4h-dQC" id="Eac-w4-wfV"/>
                     </connections>
@@ -36,6 +42,50 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KNw-RG-LAL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1131.8840579710145" y="98.4375"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="CO7-HE-m5t">
+            <objects>
+                <viewController id="cCj-qQ-ncT" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="br9-qD-Vkd">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="New Location" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jr2-2P-GUI">
+                                <rect key="frame" x="20" y="152" width="374" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="29"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LBQ-wJ-xfI">
+                                <rect key="frame" x="20" y="250" width="45" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Please give a valid placename" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="NY1-Ys-gs2">
+                                <rect key="frame" x="20" y="302" width="374" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qr8-Qt-soi">
+                                <rect key="frame" x="176" y="431" width="69" height="41"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <state key="normal" title="Create"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="iPC-ew-6Wt"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="fMR-Gl-dyW"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="y9o-kS-Lig" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2057.971014492754" y="97.767857142857139"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="9Fo-BT-A4c">
@@ -311,4 +361,7 @@
             <point key="canvasLocation" x="1131.8840579710145" y="-579.24107142857144"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="plus" catalog="system" width="64" height="56"/>
+    </resources>
 </document>
