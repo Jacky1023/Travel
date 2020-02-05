@@ -12,14 +12,14 @@ import CoreLocation
 import MapKit
 import FirebaseDatabase
 
-
 class TravelMapViewController : UIViewController{
     @IBOutlet weak var TravelMap: MKMapView!
     let locationDelegate = TravelLocationDelegate()
     var latestLocation: CLLocation? = nil
+    var postLocation = [String]()
     let locationManager: CLLocationManager = {
     $0.requestWhenInUseAuthorization()
-    $0.desiredAccuracy = kCLLocationAccuracyBest
+    $0.desiredAccuracy = kCLLocationAccuracyBest   
     $0.startUpdatingLocation()
     $0.startUpdatingHeading()
     return $0
@@ -76,8 +76,10 @@ class TravelMapViewController : UIViewController{
         }
     }
     
+   
      override func viewDidLoad() {
             super.viewDidLoad()
+        locationManager.requestWhenInUseAuthorization()
             locationManager.delegate = locationDelegate
             
             locationDelegate.locationCallBack = { location in
@@ -89,8 +91,23 @@ class TravelMapViewController : UIViewController{
                 self.centermapOnLocation(location: location)
                 
                 self.createAnnotations(locations: self.annotationLocations)
+            //let coordinate = CLLocationCoordinate2D(latitude: lat, longitude: long)
+            //let addLocationViewController = AddLocationViewController(location:coordinate)
             }
-        }
+            //set firebase reference
+           // self.ref = Database.database().reference()
+                       
+            //Retrieve the location
+//            self.ref?.child("Location").observe(.childAdded, with: {(DataSnapshot)in
+//            let post = DataSnapshot.value as? String
+//                if let actualPost = post{
+//                    self.postLocation.append(actualPost)
+//                }
+                
+//        })
+    
+    
     }
 
 
+}
