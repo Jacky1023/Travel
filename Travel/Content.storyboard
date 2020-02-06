@@ -52,40 +52,73 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="New Location" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jr2-2P-GUI">
-                                <rect key="frame" x="20" y="152" width="374" height="21"/>
+                                <rect key="frame" x="20" y="99" width="374" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="29"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Username" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LBQ-wJ-xfI">
-                                <rect key="frame" x="20" y="250" width="90" height="24"/>
+                                <rect key="frame" x="20" y="138" width="90" height="24"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Please inout your name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="NY1-Ys-gs2">
-                                <rect key="frame" x="20" y="282" width="374" height="34"/>
+                                <rect key="frame" x="20" y="170" width="374" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Location name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ijn-dJ-x5s">
-                                <rect key="frame" x="20" y="344" width="154" height="21"/>
+                                <rect key="frame" x="20" y="232" width="154" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Plase enter a valid place" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="i27-ur-BGm">
-                                <rect key="frame" x="20" y="385" width="374" height="34"/>
+                                <rect key="frame" x="20" y="273" width="374" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Country" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Z7n-hT-dCt">
+                                <rect key="frame" x="20" y="332" width="70" height="24"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="People" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gtc-oS-05P">
+                                <rect key="frame" x="20" y="429" width="60" height="24"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bHj-CQ-xz0">
+                                <rect key="frame" x="20" y="352" width="374" height="69"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            </pickerView>
+                            <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="RTX-5M-hUo">
+                                <rect key="frame" x="20" y="459" width="120" height="100"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            </pickerView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Category" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mlz-aw-XLU">
+                                <rect key="frame" x="217" y="429" width="81" height="24"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="POQ-mr-7uH">
+                                <rect key="frame" x="185" y="459" width="209" height="100"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            </pickerView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qr8-Qt-soi">
-                                <rect key="frame" x="157" y="428" width="69" height="41"/>
+                                <rect key="frame" x="173" y="677" width="69" height="41"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                 <state key="normal" title="Create"/>
@@ -93,12 +126,23 @@
                                     <action selector="btnCreateLocation:" destination="cCj-qQ-ncT" eventType="touchUpInside" id="dqE-cd-Tf2"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="DateTime" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UbJ-0G-EbE">
+                                <rect key="frame" x="20" y="586" width="374" height="24"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="iPC-ew-6Wt"/>
                     </view>
                     <navigationItem key="navigationItem" id="fMR-Gl-dyW"/>
                     <connections>
+                        <outlet property="Categorypicker" destination="POQ-mr-7uH" id="EGe-g1-huN"/>
+                        <outlet property="Countrypicker" destination="bHj-CQ-xz0" id="Aun-m5-l6O"/>
+                        <outlet property="Peoplepicker" destination="RTX-5M-hUo" id="8V0-o7-bWP"/>
+                        <outlet property="datelabel" destination="UbJ-0G-EbE" id="Nno-BX-ASf"/>
                         <outlet property="labelLocation" destination="ijn-dJ-x5s" id="bSF-kw-XW1"/>
                         <outlet property="labelUser" destination="br9-qD-Vkd" id="EMC-Xp-pPN"/>
                         <outlet property="txtlocationname" destination="i27-ur-BGm" id="4OP-rH-GI7"/>
@@ -151,7 +195,7 @@
         <scene sceneID="mwW-Mb-0nM">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="BjR-zt-aZY" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Map" id="woT-7M-CzM" userLabel="Map"/>
+                    <tabBarItem key="tabBarItem" title="Map" selectedImage="map" catalog="system" id="woT-7M-CzM" userLabel="Map"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="hWv-9S-rq8">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
@@ -170,7 +214,7 @@
         <scene sceneID="CLN-nw-85W">
             <objects>
                 <navigationController storyboardIdentifier="Content" automaticallyAdjustsScrollViewInsets="NO" id="jpG-wg-4Fh" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Home" id="6p4-BQ-g38"/>
+                    <tabBarItem key="tabBarItem" title="Home" selectedImage="house.fill" catalog="system" id="6p4-BQ-g38"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="6eo-n7-nKD">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
@@ -230,7 +274,7 @@
         <scene sceneID="l7e-8H-Hk9">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="ZOe-M9-pIR" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Currency" id="C8G-fS-BeE"/>
+                    <tabBarItem key="tabBarItem" title="Currency" selectedImage="dollarsign.circle.fill" catalog="system" id="C8G-fS-BeE"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Nu6-Nl-nCk">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
@@ -390,6 +434,9 @@
         </scene>
     </scenes>
     <resources>
+        <image name="dollarsign.circle.fill" catalog="system" width="64" height="60"/>
+        <image name="house.fill" catalog="system" width="64" height="52"/>
+        <image name="map" catalog="system" width="64" height="56"/>
         <image name="person.circle.fill" catalog="system" width="64" height="60"/>
         <image name="plus" catalog="system" width="64" height="56"/>
     </resources>
