@@ -40,7 +40,7 @@ class TravelMapViewController : UIViewController{
         TravelMap.setRegion(coordinateRegion,animated:true)
     }
     
-    //annonationLocations
+    //ANNOTATIONLOCATIONS LIST
     let annotationLocations = [
         /*Singapore*/
         ["title":"Universal Studio, Singapore","latitude":1.254,"longitude":103.8328],
@@ -68,6 +68,7 @@ class TravelMapViewController : UIViewController{
         ["title":"T&K Seafood Yaoewarat","latitude":13.7401,"longitude":100.5107]
 
     ]
+    // CREATE ANNOTATIONS METHOD FOR LOCATIONS IN ANNOTATIONLOCATIONS LIST
     func createAnnotations(locations:[[String:Any]])
     {
         for location in locations{
@@ -78,6 +79,8 @@ class TravelMapViewController : UIViewController{
             TravelMap.addAnnotation(annotations)
         }
     }
+    
+    
     
    
      override func viewDidLoad() {
@@ -95,8 +98,8 @@ class TravelMapViewController : UIViewController{
                 self.centermapOnLocation(location: location)
                 
                 self.createAnnotations(locations: self.annotationLocations)
-            //let coordinate = CLLocationCoordinate2D(latitude: lat, longitude: long)
-            //let addLocationViewController = AddLocationViewController(location:coordinate)
+                self.TravelMap.showsUserLocation = true
+            
             }
             //set firebase reference
            // self.ref = Database.database().reference()
