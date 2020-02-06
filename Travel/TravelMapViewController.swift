@@ -13,6 +13,9 @@ import MapKit
 import FirebaseDatabase
 
 class TravelMapViewController : UIViewController{
+    let appDelegate = UIApplication.shared.delegate as! AppDelegate
+    
+
     @IBOutlet weak var TravelMap: MKMapView!
     let locationDelegate = TravelLocationDelegate()
     var latestLocation: CLLocation? = nil
@@ -79,14 +82,15 @@ class TravelMapViewController : UIViewController{
    
      override func viewDidLoad() {
             super.viewDidLoad()
-        locationManager.requestWhenInUseAuthorization()
             locationManager.delegate = locationDelegate
             
             locationDelegate.locationCallBack = { location in
                 self.latestLocation = location
                 let lat = String(format: "Lat: %3.8f", location.coordinate.latitude)
                 let long = String(format: "Long: %3.8f", location.coordinate.longitude)
-                print("\(lat),\(long)")
+                self.appDelegate.lat = location.coordinate.latitude
+                self.appDelegate.long = location.coordinate.longitude
+                print("Test :\(lat),\(long)")
                 
                 self.centermapOnLocation(location: location)
                 

@@ -93,13 +93,6 @@
                                     <action selector="btnCreateLocation:" destination="cCj-qQ-ncT" eventType="touchUpInside" id="dqE-cd-Tf2"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qAi-iV-S2G">
-                                <rect key="frame" x="79" y="496" width="224" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="iPC-ew-6Wt"/>
@@ -107,7 +100,6 @@
                     <navigationItem key="navigationItem" id="fMR-Gl-dyW"/>
                     <connections>
                         <outlet property="labelLocation" destination="ijn-dJ-x5s" id="bSF-kw-XW1"/>
-                        <outlet property="labelMessage" destination="qAi-iV-S2G" id="4IS-Be-X5f"/>
                         <outlet property="labelUser" destination="br9-qD-Vkd" id="EMC-Xp-pPN"/>
                         <outlet property="txtlocationname" destination="i27-ur-BGm" id="4OP-rH-GI7"/>
                         <outlet property="txtusername" destination="NY1-Ys-gs2" id="P8j-hc-zV7"/>
