@@ -195,7 +195,7 @@
         <scene sceneID="mwW-Mb-0nM">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="BjR-zt-aZY" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Map" selectedImage="map" catalog="system" id="woT-7M-CzM" userLabel="Map"/>
+                    <tabBarItem key="tabBarItem" title="Map" image="map.fill" catalog="system" id="woT-7M-CzM" userLabel="Map"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="hWv-9S-rq8">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
@@ -214,7 +214,7 @@
         <scene sceneID="CLN-nw-85W">
             <objects>
                 <navigationController storyboardIdentifier="Content" automaticallyAdjustsScrollViewInsets="NO" id="jpG-wg-4Fh" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Home" selectedImage="house.fill" catalog="system" id="6p4-BQ-g38"/>
+                    <tabBarItem key="tabBarItem" title="Home" image="house.fill" catalog="system" id="6p4-BQ-g38"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="6eo-n7-nKD">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
@@ -233,7 +233,7 @@
         <scene sceneID="DBd-Uu-kqq">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="wiI-ei-wBK" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Filter" id="KnD-RJ-Bh1"/>
+                    <tabBarItem key="tabBarItem" title="Filter" image="list.bullet" catalog="system" id="KnD-RJ-Bh1"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="nch-wy-dpy">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
@@ -257,6 +257,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="selectedImageTintColor" cocoaTouchSystemColor="darkTextColor"/>
                     </tabBar>
                     <connections>
                         <segue destination="wiI-ei-wBK" kind="relationship" relationship="viewControllers" id="EiO-sz-SNM"/>
@@ -274,7 +275,7 @@
         <scene sceneID="l7e-8H-Hk9">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="ZOe-M9-pIR" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Currency" selectedImage="dollarsign.circle.fill" catalog="system" id="C8G-fS-BeE"/>
+                    <tabBarItem key="tabBarItem" title="Currency" image="dollarsign.circle.fill" catalog="system" id="C8G-fS-BeE"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Nu6-Nl-nCk">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
@@ -365,7 +366,7 @@
         <scene sceneID="bpz-Gy-tko">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="QkR-I6-emd" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="User" id="S0g-IK-D6I"/>
+                    <tabBarItem key="tabBarItem" title="User" image="person.fill" catalog="system" id="S0g-IK-D6I"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="qjU-eR-H0C">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
@@ -436,8 +437,10 @@
     <resources>
         <image name="dollarsign.circle.fill" catalog="system" width="64" height="60"/>
         <image name="house.fill" catalog="system" width="64" height="52"/>
-        <image name="map" catalog="system" width="64" height="56"/>
+        <image name="list.bullet" catalog="system" width="64" height="44"/>
+        <image name="map.fill" catalog="system" width="64" height="56"/>
         <image name="person.circle.fill" catalog="system" width="64" height="60"/>
+        <image name="person.fill" catalog="system" width="64" height="60"/>
         <image name="plus" catalog="system" width="64" height="56"/>
     </resources>
 </document>
