@@ -17,6 +17,8 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var passwordTxtFld: UITextField!
     @IBOutlet weak var errorLabel: UILabel!
     
+    let appdelegate = UIApplication.shared.delegate as! AppDelegate
+        
     override func viewDidLoad() {
         errorLabel.text = ""
         
@@ -50,6 +52,7 @@ class LoginViewController: UIViewController {
             //Check if User is signed in
             if Auth.auth().currentUser != nil {
                 
+                self!.appdelegate.useremail = self!.emailTxtFld.text!
                 let storyboard = UIStoryboard(name: "Content", bundle: nil)
                 let vc = storyboard.instantiateViewController(withIdentifier: "home") as UIViewController
                 vc.modalPresentationStyle = .fullScreen // try without fullscreen
@@ -64,5 +67,6 @@ class LoginViewController: UIViewController {
             
         }
     }
+
 }
 

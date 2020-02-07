@@ -16,11 +16,12 @@ class AccountViewcontroller : UIViewController{
     @IBOutlet weak var emailtv: UILabel!
     @IBOutlet weak var userphoto: UIImageView!
     
+    let appdelegate = UIApplication.shared.delegate as! AppDelegate
+        
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        userphoto.isUserInteractionEnabled = true
-        userphoto.addGestureRecognizer(UITapGestureRecognizer(target: self, action: Selector(("imagetapped"))))
+        emailtv.text = appdelegate.useremail
     }
     @IBAction func signOutBtn(_ sender: UIBarButtonItem) {
         
@@ -35,12 +36,6 @@ class AccountViewcontroller : UIViewController{
             
         } catch let signOutError as NSError {
           print ("Error signing out: %@", signOutError)
-        }
-    }
-    
-    @objc func imagetapped(gesture : UITapGestureRecognizer){
-        if let userphoto = gesture.view as? UIImageView{
-            performSegue(withIdentifier: "ChangePhotoViewController", sender: "")
         }
     }
     
