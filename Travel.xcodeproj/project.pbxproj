@@ -22,6 +22,7 @@
 		10E501B923ECEE6400DFBA46 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10E501B823ECEE6400DFBA46 /* SignUpViewController.swift */; };
 		10E501BB23ECEF9500DFBA46 /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10E501BA23ECEF9500DFBA46 /* LogInViewController.swift */; };
 		10E501BD23ECFA1C00DFBA46 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10E501BC23ECFA1C00DFBA46 /* HomeViewController.swift */; };
+		10E501C023ED035200DFBA46 /* HomeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10E501BF23ED035200DFBA46 /* HomeTableViewCell.swift */; };
 		446A9EFD23EA52590049590B /* AddLocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 446A9EFC23EA52590049590B /* AddLocationViewController.swift */; };
 		BA4D4D1B23DA0F6700D0998B /* FilterTableviewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA4D4D1A23DA0F6700D0998B /* FilterTableviewController.swift */; };
 		BA4D4D1F23DA1E9C00D0998B /* CountryObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA4D4D1E23DA1E9C00D0998B /* CountryObject.swift */; };
@@ -73,6 +74,7 @@
 		10E501B823ECEE6400DFBA46 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		10E501BA23ECEF9500DFBA46 /* LogInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInViewController.swift; sourceTree = "<group>"; };
 		10E501BC23ECFA1C00DFBA46 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		10E501BF23ED035200DFBA46 /* HomeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTableViewCell.swift; sourceTree = "<group>"; };
 		221FEA00D9E28AB0D3AB2CBC /* Pods-Travel.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Travel.debug.xcconfig"; path = "Target Support Files/Pods-Travel/Pods-Travel.debug.xcconfig"; sourceTree = "<group>"; };
 		446A9EFC23EA52590049590B /* AddLocationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddLocationViewController.swift; sourceTree = "<group>"; };
 		46209618CBB08106C4D706D7 /* Pods-Travel.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Travel.release.xcconfig"; path = "Target Support Files/Pods-Travel/Pods-Travel.release.xcconfig"; sourceTree = "<group>"; };
@@ -138,6 +140,7 @@
 		0EE9A44023CEE741003912FD /* Travel */ = {
 			isa = PBXGroup;
 			children = (
+				10E501BE23ED030900DFBA46 /* HomeTableCell */,
 				0EE9A44123CEE741003912FD /* AppDelegate.swift */,
 				0E02A8BA23D6017F00487B2B /* GoogleService-Info.plist */,
 				0EE9A44323CEE741003912FD /* SceneDelegate.swift */,
@@ -181,6 +184,14 @@
 				0EE9A46523CEE742003912FD /* Info.plist */,
 			);
 			path = TravelUITests;
+			sourceTree = "<group>";
+		};
+		10E501BE23ED030900DFBA46 /* HomeTableCell */ = {
+			isa = PBXGroup;
+			children = (
+				10E501BF23ED035200DFBA46 /* HomeTableViewCell.swift */,
+			);
+			path = HomeTableCell;
 			sourceTree = "<group>";
 		};
 		B7D8A2446AC9B98241C644CD /* Frameworks */ = {
@@ -383,6 +394,7 @@
 				10E501BD23ECFA1C00DFBA46 /* HomeViewController.swift in Sources */,
 				BA77784B23DB62EC0010B17F /* PeopleObject.swift in Sources */,
 				0EE9A44623CEE741003912FD /* ViewController.swift in Sources */,
+				10E501C023ED035200DFBA46 /* HomeTableViewCell.swift in Sources */,
 				BAC3DCA323EC717100EC174E /* ChangePhotoViewController.swift in Sources */,
 				BAD797F023E47CB70012204E /* CurrencyConverterViewController.swift in Sources */,
 				0EE9A44223CEE741003912FD /* AppDelegate.swift in Sources */,
