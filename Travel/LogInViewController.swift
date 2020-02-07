@@ -41,7 +41,10 @@ class LoginViewController: UIViewController {
                 self?.present(vc,animated: true,completion: nil)
                 
             } else {
-                self?.errorLabel.text = "Please Enter Right Credentials For Login"
+                let storyboard = UIStoryboard(name: "Main", bundle: nil)
+                let vc = storyboard.instantiateViewController(withIdentifier: "landingPage") as UIViewController
+                vc.modalPresentationStyle = .fullScreen // try without fullscreen
+                self?.present(vc,animated: true,completion: nil)
             }
             
         }
