@@ -154,10 +154,10 @@
             </objects>
             <point key="canvasLocation" x="2057.971014492754" y="97.767857142857139"/>
         </scene>
-        <!--View Controller-->
+        <!--Home View Controller-->
         <scene sceneID="9Fo-BT-A4c">
             <objects>
-                <viewController id="Ewf-Ur-gWX" sceneMemberID="viewController">
+                <viewController id="Ewf-Ur-gWX" customClass="HomeViewController" customModule="Travel" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="QwT-Be-usO">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

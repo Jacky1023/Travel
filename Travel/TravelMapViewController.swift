@@ -93,7 +93,7 @@ class TravelMapViewController : UIViewController{
                 let long = String(format: "Long: %3.8f", location.coordinate.longitude)
                 self.appDelegate.lat = location.coordinate.latitude
                 self.appDelegate.long = location.coordinate.longitude
-                print("Test :\(lat),\(long)")
+                //print("Test :\(lat),\(long)")
                 
                 self.centermapOnLocation(location: location)
                 
