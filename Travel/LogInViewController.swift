@@ -19,6 +19,21 @@ class LoginViewController: UIViewController {
     
     override func viewDidLoad() {
         errorLabel.text = ""
+        
+        if Auth.auth().currentUser != nil {
+            
+            let storyboard = UIStoryboard(name: "Content", bundle: nil)
+            let vc = storyboard.instantiateViewController(withIdentifier: "home") as UIViewController
+            vc.modalPresentationStyle = .fullScreen // try without fullscreen
+            present(vc,animated: true,completion: nil)
+            
+        } else {
+            let storyboard = UIStoryboard(name: "Main", bundle: nil)
+            let vc = storyboard.instantiateViewController(withIdentifier: "landingPage") as UIViewController
+            vc.modalPresentationStyle = .fullScreen // try without fullscreen
+            present(vc,animated: true,completion: nil)
+        }
+        
         super.viewDidLoad()
     }
     
