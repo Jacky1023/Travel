@@ -41,10 +41,10 @@
             </objects>
             <point key="canvasLocation" x="460.86956521739131" y="52.901785714285715"/>
         </scene>
-        <!--View Controller-->
+        <!--Sign Up View Controller-->
         <scene sceneID="9Bw-Zs-Ty6">
             <objects>
-                <viewController id="0V6-zW-5g0" sceneMemberID="viewController">
+                <viewController id="0V6-zW-5g0" customClass="SignUpViewController" customModule="Travel" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="BVX-Od-fou">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -65,6 +65,9 @@
                                 <rect key="frame" x="180" y="489" width="54" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Sign Up"/>
+                                <connections>
+                                    <action selector="signUpBtn:" destination="0V6-zW-5g0" eventType="touchUpInside" id="5Up-3z-fp7"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Sign Up Page" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qAV-65-nTS">
                                 <rect key="frame" x="155" y="182" width="104" height="21"/>
@@ -79,11 +82,24 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fXy-af-cf2">
+                                <rect key="frame" x="186" y="609" width="42" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="zl3-uq-Khl"/>
                     </view>
                     <navigationItem key="navigationItem" id="R7A-b5-aoA"/>
+                    <connections>
+                        <outlet property="NameTxtFld" destination="Tss-aJ-4fA" id="ilh-CX-5c8"/>
+                        <outlet property="emailTxtFld" destination="tUh-Dn-cjR" id="Uhu-vM-iAD"/>
+                        <outlet property="passwordTxtFld" destination="SQz-lC-YgS" id="xoE-Gc-CVm"/>
+                        <outlet property="signUpError" destination="fXy-af-cf2" id="p8r-5D-Eei"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tb7-fe-JJg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
