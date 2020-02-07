@@ -17,6 +17,6 @@ class TravelLocationDelegate : NSObject, CLLocationManagerDelegate
     {
         guard let currentLocation = locations.last else{return}
         locationCallBack?(currentLocation)
-        print("Location delegate")
+        //print("Location delegate")
     }
 }
