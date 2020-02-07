@@ -127,7 +127,11 @@ class FilterTableViewcontroller : UITableViewController{
             
         let country2 = CountryObject(name: "Malaysia", checked: false)
         
-        countrysection += [country1,country2]
+        let country3 = CountryObject(name: "Brunei", checked: false)
+        
+        let country4 = CountryObject(name: "Thailand", checked: false)
+        
+        countrysection += [country1,country2,country3,country4]
     }
     
     private func loadpeople(){
