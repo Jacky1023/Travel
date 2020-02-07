@@ -56,7 +56,7 @@ class AddLocationViewController:UIViewController,UIPickerViewDelegate,UIPickerVi
         let longitude = appDelegate.long
        //A KEY TO THAT TO PUSH ALL THE DATA UNDER LOCATION KEY
         refLocations = Database.database().reference().child("Location");
-
+        self.appDelegate.username = self.txtusername.text!
         let location = ["Locationname":txtlocationname.text! as String,"Latitude":latitude as Any, "Longitude":longitude as Any,"Country":selectedCountry,"People":selectedPeople,"Category":selectedCategory,"DateTime":datelabel.text!]
         //A USER CAN HAVE MANY LOCATION DATA, SO THAT EVERY DATA NEED TO HAVE UNIQUE ID FOR IT.
         refLocations.child(txtusername.text!).childByAutoId().setValue(location)

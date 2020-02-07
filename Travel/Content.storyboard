@@ -218,7 +218,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zdJ-HL-Yga">
-                                <rect key="frame" x="155" y="324" width="191" height="21"/>
+                                <rect key="frame" x="155" y="324" width="191" height="32"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
@@ -231,6 +231,21 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eDb-yS-uRu">
+                                <rect key="frame" x="155" y="481" width="77" height="41"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <state key="normal" title="Update"/>
+                                <connections>
+                                    <action selector="updateBtn:" destination="KbB-Ii-yjo" eventType="touchUpInside" id="dNn-13-dfm"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="New username " textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Wmn-ze-uKT">
+                                <rect key="frame" x="30" y="431" width="354" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="0hk-0o-z2l"/>
@@ -244,6 +259,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="emailtv" destination="BeZ-8L-KGT" id="PyS-Ir-rPm"/>
+                        <outlet property="txtusername" destination="Wmn-ze-uKT" id="9NY-6q-sZM"/>
                         <outlet property="usernametv" destination="zdJ-HL-Yga" id="7gB-8Q-bPg"/>
                         <outlet property="userphoto" destination="Su5-Fb-wA5" id="G22-5J-4nD"/>
                         <segue destination="cZ6-y2-wE3" kind="presentation" id="YIt-hS-ENg"/>
@@ -251,7 +267,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Ej-y3-ctL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1132" y="2275"/>
+            <point key="canvasLocation" x="1131.8840579710145" y="2274.7767857142858"/>
         </scene>
         <!--Change Photo View Controller-->
         <scene sceneID="Af9-fQ-eeN">

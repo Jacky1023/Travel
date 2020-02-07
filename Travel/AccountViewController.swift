@@ -8,19 +8,23 @@
 
 import Foundation
 import UIKit
-import Firebase
+import FirebaseAuth
+import FirebaseDatabase
 
 class AccountViewcontroller : UIViewController{
     
+    @IBOutlet weak var txtusername: UITextField!
     @IBOutlet weak var usernametv: UILabel!
     @IBOutlet weak var emailtv: UILabel!
     @IBOutlet weak var userphoto: UIImageView!
-    
+    var newusername:String!
+    var refUsername:DatabaseReference!
+
     let appdelegate = UIApplication.shared.delegate as! AppDelegate
         
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        usernametv.text = appdelegate.username
         emailtv.text = appdelegate.useremail
     }
     @IBAction func signOutBtn(_ sender: UIBarButtonItem) {
@@ -38,5 +42,11 @@ class AccountViewcontroller : UIViewController{
           print ("Error signing out: %@", signOutError)
         }
     }
+    @IBAction func updateBtn(_ sender: Any) {
+        newusername = txtusername.text
+        usernametv.text = "\(newusername!)"
+        //refUsername.child("Location").childByAutoId().setValue("\(txtusername.text)")
+    }
+    
     
 }
