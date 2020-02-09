@@ -17,6 +17,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var title = String()
     var useremail = String()
     var username = String()
+    var countryselected = String()
+    var peopleselected = String()
+    var placeselected = String()
+    
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.

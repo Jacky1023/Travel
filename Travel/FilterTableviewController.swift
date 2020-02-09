@@ -8,14 +8,37 @@
 
 import Foundation
 import UIKit
+import FirebaseDatabase
 
 class FilterTableViewcontroller : UITableViewController{
     
     var countrysection = [CountryObject]()
     var peoplesection = [PeopleObject]()
     var placesection = [PlaceObject]()
-    
+    let appdelegate = UIApplication.shared.delegate as! AppDelegate
+
     var filterheaders:[String] = ["Country","People","Place Category","Rating","Datetime"]
+    
+    @IBAction func Filterdone(_ sender: Any) {
+        
+        let ref = Database.database().reference()
+        
+        ref.child("Location").observeSingleEvent(of: .value){
+            (snapshot) in
+            let data = snapshot.value as? [String:Any]
+        }
+        
+        if((appdelegate.countryselected == "") && (appdelegate.peopleselected == "") && (appdelegate.placeselected == "")){
+            
+            print("empty")
+        }
+        else{
+            print(Database.database().reference().child("Location").queryOrdered(byChild: "People").queryEqual(toValue: appdelegate.peopleselected))
+            print(Database.database().reference().child("Location").queryOrdered(byChild: "Category").queryEqual(toValue: appdelegate.placeselected))
+            print(Database.database().reference().child("Location").queryOrdered(byChild: "Country").queryEqual(toValue: appdelegate.countryselected))
+        }
+        
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -90,9 +113,12 @@ class FilterTableViewcontroller : UITableViewController{
             if tableView.cellForRow(at: indexPath)?.accessoryType == UITableViewCell.AccessoryType.checkmark{
                 tableView.cellForRow(at: indexPath)?.accessoryType = UITableViewCell.AccessoryType.none
             countrysection[indexPath.row].checked = false
+                appdelegate.countryselected = ""
             }
             else{
                 tableView.cellForRow(at: indexPath)?.accessoryType = UITableViewCell.AccessoryType.checkmark
+                appdelegate.countryselected = countrysection[indexPath.row].name
+
             }
             
         case 1:
@@ -100,9 +126,13 @@ class FilterTableViewcontroller : UITableViewController{
             if tableView.cellForRow(at: indexPath)?.accessoryType == UITableViewCell.AccessoryType.checkmark{
                 tableView.cellForRow(at: indexPath)?.accessoryType = UITableViewCell.AccessoryType.none
             peoplesection[indexPath.row].checked = false
+                appdelegate.peopleselected = ""
+
             }
             else{
                 tableView.cellForRow(at: indexPath)?.accessoryType = UITableViewCell.AccessoryType.checkmark
+                appdelegate.peopleselected = peoplesection[indexPath.row].peopletype
+
             }
             
         case 2:
@@ -110,9 +140,12 @@ class FilterTableViewcontroller : UITableViewController{
             if tableView.cellForRow(at: indexPath)?.accessoryType == UITableViewCell.AccessoryType.checkmark{
                 tableView.cellForRow(at: indexPath)?.accessoryType = UITableViewCell.AccessoryType.none
             placesection[indexPath.row].checked = false
+                appdelegate.placeselected = ""
             }
             else{
                 tableView.cellForRow(at: indexPath)?.accessoryType = UITableViewCell.AccessoryType.checkmark
+                appdelegate.placeselected = placesection[indexPath.row].placetype
+
             }
             
         default:

@@ -62,6 +62,7 @@ class LoginViewController: UIViewController {
         //Validation
         if emailTxtFld.text != "" && passwordTxtFld.text != "" {
             errorLabel.text = "Attempting to log in..."
+            self.appdelegate.useremail = self.emailTxtFld.text!
             print(emailTxtFld.text)
             print(passwordTxtFld.text)
             Auth.auth().signIn(withEmail: emailTxtFld.text!, password: passwordTxtFld.text!) { [weak self] authResult, error in
